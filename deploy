@@ -1,0 +1,7 @@
+virtualenv -p python3 venv
+. ./venv/bin/activate
+cd backend
+python -m pip install -r requirements.txt
+cd prj
+./manage.py makemigrations
+./manage.py migrate

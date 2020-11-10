@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Deploing delivery project"
+. ./venv/bin/activate
+case "$#" in
+0 )
+        port=8787
+;;
+1 )
+        port=$1
+esac
+cd backend/prj
+./manage.py runserver $port
